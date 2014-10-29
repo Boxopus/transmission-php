@@ -8,10 +8,10 @@ class ResponseValidator
 {
     /**
      * @param  string           $method
-     * @param  stdClass         $response
+     * @param  stdClass|null    $response
      * @throws RuntimeException
      */
-    public static function validate($method, \stdClass $response)
+    public static function validate($method, $response)
     {
         if (!isset($response->result)) {
             throw new \RuntimeException('Invalid response received from Transmission');
